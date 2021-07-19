@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from plexapi.server import PlexServer
-from config import baseurl, token
+from plexcsv.config import baseurl, token
 
 plex = PlexServer(baseurl, token)
 
