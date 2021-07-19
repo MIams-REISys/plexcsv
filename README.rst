@@ -21,9 +21,20 @@ Usage
 
 **Creating a playlist using the CLI:**
 
-* The create command takes up to six arguments. Four of them mandatory.
-* See the `wiki`_ for full details.
+* See `wiki`_ for full details.
 
 .. _wiki: https://github.com/swills1/plexcsv/wiki
 
+* The create command takes five main arguments. Four of them mandatory.
+
 ``plexcsv create [-h] -t TYPE [-s SCOPE] -l LIBTYPE -T TITLE -p PATH``
+
+The library supports using list operators such as contains, does not contain, is, is not, begins with, ends with.
+
+Current Limitations
+-------------------
+* Currently, the library only supports Artist, Album, and Track as filters. 
+* Does not Currently support setting the playlist sort.
+* Does not support nested rule groups.
+
+There are plans to add these items. Sort being number 1.
