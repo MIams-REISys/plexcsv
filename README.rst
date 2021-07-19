@@ -8,6 +8,12 @@ Overview
 * It reduces the effort needed to build / rebuild  complex playlists, and allows automating those tasks.
 * It also provides the ability to back up and share playlist criteria.
 
+Why would you want any of this? 
+
+* Maybe you want to quickly build a playlist of Rolling Stone's Top 500 Albums of All Time.
+* Maybe you want to programatically create playlists / automate playlist creation.
+* Maybe you want to expand the library to ingest data from an API or website and build playlists from that data.
+* Maybe you would like to quickly share playlists for friends and family to ingest.
 
 Install
 -------
@@ -36,5 +42,6 @@ Current Limitations
 * Currently, the library only supports Artist, Album, and Track as filters. 
 * Does not Currently support setting the playlist sort.
 * Does not support nested rule groups.
+* The plexapi has a bug where libtype isn't working for smart playlists. There is a pull request waiting to be merged that fixes this.
 
 There are plans to add these items. Sort being number 1.
