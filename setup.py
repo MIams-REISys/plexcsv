@@ -24,14 +24,15 @@ setup(
         'plexcsv',
     ],
 
-install_requires=[
-        #'musicbrainzngs>=0.4',
-    ]
-)
-
 entry_points={
         'console_scripts': [
             # command = package.module:function
             'cli = plexcsv.commands:main',
         ],
-    },
+    },    
+
+install_requires=[
+        #'musicbrainzngs>=0.4',
+    ]
+)
+
