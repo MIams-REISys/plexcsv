@@ -1,9 +1,12 @@
+import os
 import pandas as pd
 import numpy as np
 from plexapi.server import PlexServer
-from plexcsv.config import baseurl, token
+from dotenv import load_dotenv
 
-plex = PlexServer(baseurl, token)
+load_dotenv()
+MY_ENV_VAR = os.getenv('PLEXAPI_CONFIG_PATH')
+plex = PlexServer()
 
 def create_classic_playlist (title, libtype, path):
     """create classic playlist"""
@@ -53,6 +56,3 @@ def create_smart_playlist (title, libtype, path, scope='any'):
         filter_scope = {'or': playlist_dict}
 
     plex.createPlaylist(title, libtype=libtype, smart=True, section='Music', filters=filter_scope)
-    print(filter_scope)
-
-

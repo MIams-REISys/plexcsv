@@ -129,8 +129,7 @@ dmypy.json
 .pyre/
 
 #Custom
-config.py
+plexcsv/csv_files
+addlabel.py
 scratch.py
 tests.py
-p_classic.csv
-p_smart.csv
