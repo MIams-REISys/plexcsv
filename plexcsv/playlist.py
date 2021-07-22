@@ -41,7 +41,7 @@ def create_smart_playlist (title, libtype, path, scope='any'):
 
     playlist_series = pd.read_csv(
         path,
-        header=None,
+        header=1,
         names=['key', 'value'],
         index_col=['key'],
         squeeze=True,
@@ -56,3 +56,5 @@ def create_smart_playlist (title, libtype, path, scope='any'):
         filter_scope = {'or': playlist_dict}
 
     plex.createPlaylist(title, libtype=libtype, smart=True, section='Music', filters=filter_scope)
+
+create_smart_playlist ('title', libtype='album', path='/home/steven/Projects/plexcsv/plexcsv_dev/plexcsv/csv_files/playlist_smart.csv')

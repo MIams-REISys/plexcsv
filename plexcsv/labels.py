@@ -19,3 +19,14 @@ def export_album_data(path):
     my_df.to_csv(path, index=False)
 
 export_album_data('/home/steven/Projects/plexcsv/plexcsv_dev/plexcsv/labelf.csv')
+
+
+load_dotenv()
+MY_ENV_VAR = os.getenv('PLEXAPI_CONFIG_PATH')
+plex = PlexServer()
+
+playlist_search = plex.library.section('Music').search(filters={"album.title==": "horses"}, libtype='album')
+
+#print(playlist_search)
+for a in playlist_search:
+    a.addLabel(['3', '2', 'long long long long'])
