@@ -27,7 +27,7 @@ setup(
 entry_points={
         'console_scripts': [
             # command = package.module:function
-            'cli = plexcsv.commands:main',
+            'plexcsv = plexcsv.commands:main',
         ],
     },    
 
